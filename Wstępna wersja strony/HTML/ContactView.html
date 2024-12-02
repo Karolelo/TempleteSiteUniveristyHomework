@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="../JavaScript/PaymentScripts.js"></script>
+</head>
+<body>
+<header id="header">
+    <img src="../Icons/Logo.png" alt="logo" id="logo">
+    <div id="cart">
+        <img src="../Icons/Cart.png" alt="cart" id="cart-icon" onclick="goToCart()">
+        <span id="cart-count">0</span>
+    </div>
+</header>
+<nav id="menu">
+    <a href="MainView.html">Strona główna</a>
+    <a href="Products.html">Produkty</a>
+    <a href="ContactView.html">Kontakt</a>
+    <a href="LoginView.html">Zaloguj</a>
+    <a href="RegistrationView.html">Rejestracja</a>
+</nav>
+<section id="contact-view">
+    <address class="side-bar">
+        <h1>Kontakt:</h1>
+        <h3>Mail:</h3>
+        <p>xxx@gmail.com</p>
+        <h3>Telefon:</h3>
+        <p>5223231231</p>
+    </address>
+    <form id="contact-form">
+        <label for="name">Imię</label>
+        <input type="text" name="name" id="name">
+
+        <label for="surname">Nazwisko</label>
+        <input type="text" name="surname" id="surname">
+
+        <label for="country">Wybierz kraj</label>
+
+        <select name="country" id="country">
+            <option value="Poland">Polska</option>
+            <option value="Romania">Rumunia</option>
+            <option value="Ukraine">Ukraina</option>
+        </select>
+        <textarea id="subject" name="subject" placeholder="Napisz o co chodzi">
+        </textarea>
+        <button type="submit">Wyślij</button>
+    </form>
+</section>
+    <footer id="footer">
+        <p>&copy;2024 OST-WEST | Wszystkie prawa zastrzeżone</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-skype"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

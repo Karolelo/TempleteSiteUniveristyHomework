@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="../JavaScript/PaymentScripts.js"></script>
+</head>
+<body>
+<header id="header">
+    <img src="../Icons/Logo.png" alt="logo" id="logo">
+    <div id="cart">
+        <img src="../Icons/Cart.png" alt="cart" id="cart-icon" onclick="goToCart()">
+        <span id="cart-count">0</span>
+    </div>
+</header>
+<nav id="menu">
+    <a href="MainView.html">Strona główna</a>
+    <a href="Products.html">Produkty</a>
+    <a href="ContactView.html">Kontakt</a>
+    <a href="LoginView.html">Zaloguj</a>
+    <a href="RegistrationView.html">Rejestracja</a>
+</nav>
+<form id="personal-data" class="form-reg" action="" method="post">
+    <label for="name">Imię:</label>
+    <input type="text" name="name" id="name">
+    <label for="surname">Nazwisko:</label>
+    <input type="text" name="surname" id="surname">
+    <label for="age">Data urodzenia:</label>
+    <input type="date" name="age" id="age">
+    <button type="button" onclick="switchForm('personal-data','account-data')">Przejdź dalej</button>
+</form>
+<form id="account-data" class="form-reg" action="" method="post">
+    <label for="mail">E-mail:</label>
+    <input type="email" name="email" id="mail">
+    <label for="username">Nazwa użytkownika:</label>
+    <input type="text" name="username" id="username">
+    <label for="password">Hasło:</label>
+    <input type="password" name="password" id="password">
+    <label for="confirm_password">Potwierdź hasło:</label>
+    <input type="password" name="confirm_password" id="confirm_password">
+    <button type="submit">Utwórz konto</button>
+</form>
+<footer id="footer">
+    <p>&copy;2024 OST-WEST | Wszystkie prawa zastrzeżone</p>
+    <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-skype"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+<script>
+    window.onload = function() {
+        document.getElementById('account-data').style.display = 'none';
+    }
+    function switchForm(sourceFormId, targetFormId) {
+        document.getElementById(sourceFormId).style.display = 'none';
+        document.getElementById(targetFormId).style.display = '';
+    }
+</script>
+</body>
+</html>

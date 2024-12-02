@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/adminDashboardStyle.css">
+    <script src="../JavaScript/AdminScripts.js"></script>
+</head>
+<body>
+
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <button type="button" id="close-content" onclick="closeModel()">&times;</button>
+        <label for="product-name">Nazwa produktu</label>
+        <input type="text" id="product-name">
+
+        <label for="product-price">Cena</label>
+        <input type="text" id="product-price">
+
+        <label for="product-quanity">Ilość</label>
+        <input type="number" id="product-quanity">
+
+        <div class="file-upload">
+            <label for="file-input" class="custom-file-label">Wybierz plik</label>
+            <input type="file" id="file-input" />
+            <span class="file-name">Nie wybrano pliku</span>
+        </div>
+
+        <button type="button" id="confirm">Potwierdź</button>
+        <button type="button" id="cancel">Anuluj</button>
+    </div>
+</div>
+
+<div class="admin-panel">
+    <div id="admin-panel-header">
+        <ul>
+            <li onclick="openModal()">
+        <span id="add-item" class="icon">
+          <i class="fas fa-plus"></i>
+            <p>Dodaj</p>
+        </span>
+            </li>
+            <li>
+        <span id="delete-item" class="icon">
+            <i class="fas fa-trash"></i>
+            <p>Usuń</p>
+        </span>
+            </li>
+            <li onclick="openModal()">
+          <span id="edit-item" class="icon">
+              <i class="fas fa-pencil-alt"></i>
+              <p>Edytuj</p>
+          </span>
+            </li>
+        </ul>
+    </div>
+    <div id="filter-box">
+        <label>
+            <input type="text" placeholder="ID produktu">
+        </label>
+        <button>Szukaj</button>
+    </div>
+    <div id="product-admin-view-list">
+        <table id="product-list">
+            <tr>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Obrazek</th>
+                <th>Ilość</th>
+            </tr>
+            <tr>
+                <td>Piwko</td>
+                <td>19.20</td>
+                <td><img src="../Icons/Cart.png" alt="Bla bla"></td>
+                <td>10</td>
+                <td><input type="checkbox" name="select-row"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    const fileInput = document.getElementById('file-input');
+    const fileName = document.querySelector('.file-name');
+
+    fileInput.addEventListener('change', function () {
+        if (fileInput.files.length > 0) {
+            fileName.textContent = fileInput.files[0].name;
+        } else {
+            fileName.textContent = "Nie wybrano pliku";
+        }
+    });
+
+</script>
+</body>
+</html>

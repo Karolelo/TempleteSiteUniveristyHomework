@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body>
+  <form id="loginForm" method="post">
+    <div class = "imgContainer">
+      <img src = "../Icons/LoginIcon.png" alt = "login">
+    </div>
+    <label for="userName"><b>Username</b></label>
+    <input type="text" placeholder="Nazwa użytkownika" id="userName" required>
+
+    <label for="userPassword"><b>Password</b></label>
+    <input type="password" placeholder="Hasło" id="userPassword" required minlength="8">
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Zapamiętaj mnie
+    </label>
+  </form>
+</body>
+</html>
